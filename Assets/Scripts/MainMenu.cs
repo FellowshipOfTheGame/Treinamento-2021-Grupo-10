@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    // Start when the game is iniciated
+    private void Start()
+    {
+        // Plays the song of the main menu, using the AudioManager object
+        FindObjectOfType<AudioManager>().Play("MainMenuTheme");
+    }
+
     // Change the current scene to the playable game scene
     public void PlayGame ()
     {
@@ -13,7 +20,7 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    // Closes the game
+    // Close the game
     public void QuitGame ()
     {
         Debug.Log("QUIT FUNCTION ENTRY");
