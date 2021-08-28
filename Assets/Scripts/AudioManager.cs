@@ -17,9 +17,10 @@ public class AudioManager : MonoBehaviour
     // Awake is called before the Start method
     void Awake()
     {
-        // checks if there is already one AudioManager instance
-        // IF NOT, keep this object
         /*
+        // checks if there is already one AudioManager instance (NOT USED FOR THIS GAME)
+        // IF NOT, keep this object
+        
         if (instance == null)
             instance = this;
         // IF YES, destroy this object
@@ -27,11 +28,11 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
             return;
-        }
-        */
+        }       
 
-        // Make the AudioManager sound continue when the scene is switched (NOT USED FOR NOW)
-        // DontDestroyOnLoad(gameObject);
+        // Make the AudioManager sound continue even when the scene is switched (NOT USED FOR THIS GAME)
+        DontDestroyOnLoad(gameObject);
+        */
 
         // For each sound described on the AudioManager, set a AudioSource object
         // with the defined configurations
@@ -60,6 +61,7 @@ public class AudioManager : MonoBehaviour
             return;
         }         
 
+        
         // Play the sound found
         s.source.Play();
     }
