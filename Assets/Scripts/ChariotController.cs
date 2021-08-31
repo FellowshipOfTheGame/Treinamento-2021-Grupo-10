@@ -7,6 +7,7 @@ public class ChariotController : MonoBehaviour
     public Rigidbody2D chariot;
     public Rigidbody2D wheel;
 
+    public float initialImpulse;
     public float chariotTorque;
     public float speed;
 
@@ -21,6 +22,11 @@ public class ChariotController : MonoBehaviour
     void Update()
     {
         movement = Input.GetAxis("Horizontal");
+
+        if (Input.GetButtonDown("Horizontal"))
+        {
+            movement += initialImpulse;
+        }
     }
 
     private void FixedUpdate()
