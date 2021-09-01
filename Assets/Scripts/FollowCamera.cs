@@ -10,9 +10,6 @@ public class FollowCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Play the fase music
-        FindObjectOfType<AudioManager>().Play("PlayTheme0");
-
         offset = transform.position - target.position;
     }
 

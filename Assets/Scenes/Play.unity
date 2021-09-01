@@ -536,6 +536,8 @@ GameObject:
   - component: {fileID: 678706803}
   - component: {fileID: 678706804}
   - component: {fileID: 678706805}
+  - component: {fileID: 678706807}
+  - component: {fileID: 678706806}
   m_Layer: 0
   m_Name: Car Controller
   m_TagString: Untagged
@@ -574,7 +576,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -603,6 +605,54 @@ MonoBehaviour:
   fuelConsumption: 0.1
   carTorque: 30
   speed: 100
+--- !u!235 &678706806
+WheelJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678706802}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 1885939115}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0.029233932, y: -1.3378365}
+  m_ConnectedAnchor: {x: 0.009235382, y: 0.007730961}
+  m_Suspension:
+    m_DampingRatio: 1
+    m_Frequency: 1000
+    m_Angle: 90
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+--- !u!235 &678706807
+WheelJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678706802}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 1865926437}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: -1.5723095, y: -1.3226289}
+  m_ConnectedAnchor: {x: -0.0023078918, y: 0.0029386282}
+  m_Suspension:
+    m_DampingRatio: 1
+    m_Frequency: 1000
+    m_Angle: 90
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
 --- !u!1 &753178237
 GameObject:
   m_ObjectHideFlags: 0
@@ -2817,9 +2867,8 @@ GameObject:
   - component: {fileID: 1865926433}
   - component: {fileID: 1865926435}
   - component: {fileID: 1865926437}
-  - component: {fileID: 1865926436}
   m_Layer: 0
-  m_Name: tireFront
+  m_Name: tireBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2906,30 +2955,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.32
---- !u!235 &1865926436
-WheelJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1865926432}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 678706804}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -1.5700016, y: -1.3255675}
-  m_Suspension:
-    m_DampingRatio: 1
-    m_Frequency: 1000000
-    m_Angle: 90
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
 --- !u!50 &1865926437
 Rigidbody2D:
   serializedVersion: 4
@@ -2963,9 +2988,8 @@ GameObject:
   - component: {fileID: 1885939111}
   - component: {fileID: 1885939113}
   - component: {fileID: 1885939115}
-  - component: {fileID: 1885939114}
   m_Layer: 0
-  m_Name: tireBack
+  m_Name: tireFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3052,30 +3076,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.32
---- !u!235 &1885939114
-WheelJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885939110}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 678706804}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.01999855, y: -1.3455675}
-  m_Suspension:
-    m_DampingRatio: 1
-    m_Frequency: 1000000
-    m_Angle: 90
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
 --- !u!50 &1885939115
 Rigidbody2D:
   serializedVersion: 4

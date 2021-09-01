@@ -36,7 +36,7 @@ public class CarController : MonoBehaviour
             // (-1) inverts the moviment side to normal
             backTire.AddTorque((-1) * movement * speed * Time.fixedDeltaTime);
             frontTire.AddTorque((-1) * movement * speed * Time.fixedDeltaTime);
-            car.AddTorque((-1) * movement * carTorque * Time.fixedDeltaTime);
+            //car.AddTorque((-1) * movement * carTorque * Time.fixedDeltaTime);
         }
 
         fuel -= fuelConsumption * Mathf.Abs(movement) * Time.fixedDeltaTime;
