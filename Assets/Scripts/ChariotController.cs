@@ -31,7 +31,7 @@ public class ChariotController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        chariot.AddTorque((-1) * chariotTorque * Time.fixedDeltaTime);
+        //chariot.AddTorque((-1) * chariotTorque * Time.fixedDeltaTime);
         wheel.AddTorque((-1) * movement * speed * Time.fixedDeltaTime);
     }
 }
