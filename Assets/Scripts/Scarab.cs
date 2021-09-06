@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Scarab : MonoBehaviour
 {
+<<<<<<< HEAD
     // Receive the HUD with pyramids, related to the collectables
     public GameObject[] Pyramid; 
 
@@ -15,6 +16,7 @@ public class Scarab : MonoBehaviour
         {
             // If is active in the HUD, sets it false
             // and put the next pyramid active
+
             if (Pyramid[i].activeSelf)
             {
                 Pyramid[i].SetActive(false);
