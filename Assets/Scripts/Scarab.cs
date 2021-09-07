@@ -10,12 +10,14 @@ public class Scarab : MonoBehaviour
     // Trigger when the player hit the colectable
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Play the Scarab collision sound
+        FindObjectOfType<AudioManager>().Play("ScarabCollision");
+
         // Search for the active Pyramid HUD
         for (int i = 0; i < Pyramid.Length - 1; i++)
         {
             // If is active in the HUD, sets it false
             // and put the next pyramid active
-
             if (Pyramid[i].activeSelf)
             {
                 Pyramid[i].SetActive(false);
