@@ -1263,7 +1263,7 @@ MonoBehaviour:
   wheel: {fileID: 1370694587}
   initialImpulse: 100
   chariotTorque: 50
-  speed: 50
+  speed: 2000
 --- !u!1 &587638960
 GameObject:
   m_ObjectHideFlags: 0
@@ -3511,7 +3511,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
