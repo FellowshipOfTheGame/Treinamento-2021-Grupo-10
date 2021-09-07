@@ -429,6 +429,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1369566145}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: ClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &167159407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1095,6 +1107,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1369566145}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: ClickSound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5497,6 +5521,26 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4590327225311623604, guid: d3f929384355c394bb8e1f97eb78f6cd, type: 3}
+      propertyPath: sounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590327225311623604, guid: d3f929384355c394bb8e1f97eb78f6cd, type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 45b64d1411559a547a6edfb33df14b80, type: 3}
+    - target: {fileID: 4590327225311623604, guid: d3f929384355c394bb8e1f97eb78f6cd, type: 3}
+      propertyPath: sounds.Array.data[3].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590327225311623604, guid: d3f929384355c394bb8e1f97eb78f6cd, type: 3}
+      propertyPath: sounds.Array.data[3].name
+      value: ButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590327225311623604, guid: d3f929384355c394bb8e1f97eb78f6cd, type: 3}
+      propertyPath: sounds.Array.data[3].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590327225311623604, guid: d3f929384355c394bb8e1f97eb78f6cd, type: 3}
       propertyPath: sounds.Array.data[0].output
       value: 
       objectReference: {fileID: 24300002, guid: 2fb736915e5d19e429792802d20b238f, type: 2}
@@ -5515,6 +5559,14 @@ PrefabInstance:
     - target: {fileID: 4590327225311623604, guid: d3f929384355c394bb8e1f97eb78f6cd, type: 3}
       propertyPath: sounds.Array.data[2].volume
       value: 0.544
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590327225311623604, guid: d3f929384355c394bb8e1f97eb78f6cd, type: 3}
+      propertyPath: sounds.Array.data[3].output
+      value: 
+      objectReference: {fileID: 24300002, guid: 2fb736915e5d19e429792802d20b238f, type: 2}
+    - target: {fileID: 4590327225311623604, guid: d3f929384355c394bb8e1f97eb78f6cd, type: 3}
+      propertyPath: sounds.Array.data[3].volume
+      value: 0.21
       objectReference: {fileID: 0}
     - target: {fileID: 4590327225311623605, guid: d3f929384355c394bb8e1f97eb78f6cd, type: 3}
       propertyPath: m_Name

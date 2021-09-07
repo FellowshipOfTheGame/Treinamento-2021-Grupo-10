@@ -16,6 +16,8 @@ public class ChariotController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Play the background song
+        FindObjectOfType<AudioManager>().Play("PlayTheme0");
     }
 
     // Update is called once per frame

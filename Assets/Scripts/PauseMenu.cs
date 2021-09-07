@@ -10,7 +10,6 @@ public class PauseMenu : MonoBehaviour
     // Receive the PauseMenu game object
     public GameObject pauseMenuUI;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +38,9 @@ public class PauseMenu : MonoBehaviour
     // Exit the Pause Menu
     public void Resume()
     {
+        // Play the click sound
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
+
         // Exit the Pause Menu in the canvas
         pauseMenuUI.SetActive(false);
 
@@ -52,6 +54,9 @@ public class PauseMenu : MonoBehaviour
     // Open the Pause Menu
     void Pause()
     {
+        // Play the click sound
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
+
         // Show the Pause Menu in the canvas
         pauseMenuUI.SetActive(true);
 
@@ -65,6 +70,9 @@ public class PauseMenu : MonoBehaviour
     // Open the Main Menu
     public void LoadMenu()
     {
+        // Play the click sound
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
+
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }
@@ -72,6 +80,9 @@ public class PauseMenu : MonoBehaviour
     // Quit the game
     public void QuitGame()
     {
+        // Play the click sound
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
+
         Debug.Log("Quit the game");
         Application.Quit();
     }

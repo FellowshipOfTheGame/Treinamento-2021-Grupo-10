@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Scarab : MonoBehaviour
 {
-<<<<<<< HEAD
     // Receive the HUD with pyramids, related to the collectables
     public GameObject[] Pyramid; 
 
