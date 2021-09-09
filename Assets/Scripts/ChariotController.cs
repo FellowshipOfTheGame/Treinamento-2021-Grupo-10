@@ -25,15 +25,15 @@ public class ChariotController : MonoBehaviour
     {
         movement = Input.GetAxis("Horizontal");
 
-        if (Input.GetButtonDown("Horizontal"))
+        /*if (Input.GetButtonDown("Horizontal"))
         {
             movement *= initialImpulse;
-        }
+        }*/
     }
 
     private void FixedUpdate()
     {
-        //chariot.AddTorque((-1) * chariotTorque * Time.fixedDeltaTime);
+        chariot.AddTorque((-1) * movement * chariotTorque * Time.fixedDeltaTime);
         wheel.AddTorque((-1) * movement * speed * Time.fixedDeltaTime);
     }
 }

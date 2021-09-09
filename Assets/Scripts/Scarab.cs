@@ -10,6 +10,8 @@ public class Scarab : MonoBehaviour
     // Trigger when the player hit the colectable
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Collected a scarab");
+
         // Play the Scarab collision sound
         FindObjectOfType<AudioManager>().Play("ScarabCollision");
 
