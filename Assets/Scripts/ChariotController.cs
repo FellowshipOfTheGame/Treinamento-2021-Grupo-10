@@ -35,5 +35,10 @@ public class ChariotController : MonoBehaviour
     {
         chariot.AddTorque((-1) * movement * chariotTorque * Time.fixedDeltaTime);
         wheel.AddTorque((-1) * movement * speed * Time.fixedDeltaTime);
+
+        if (chariot.position.y < -6)
+        {
+            FindObjectOfType<GameManager>().EndGame();
+        }
     }
 }
