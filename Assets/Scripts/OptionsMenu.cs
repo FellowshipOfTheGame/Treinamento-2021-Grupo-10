@@ -8,6 +8,8 @@ public class OptionsMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
     public Dropdown resolutionDropdown;
+    public GameObject toggleBar01;
+    public GameObject toggleBar02;
 
     Resolution[] resolutions;
 
@@ -74,5 +76,9 @@ public class OptionsMenu : MonoBehaviour
     public void SetScreen (bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+
+        // Invert the toggle image
+        toggleBar01.SetActive(!toggleBar01.activeSelf);
+        toggleBar02.SetActive(!toggleBar02.activeSelf);
     }
 }
