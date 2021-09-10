@@ -10,19 +10,40 @@ public class Power : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Play the Scarab collision sound
-        FindObjectOfType<AudioManager>().Play("ScarabCollision");
-
         // Search for the active Pyramid HUD
         switch(type)
         {
             case Type.up:
                 Debug.Log("Collected a power up");
+
+                // Pause the background music
+                FindObjectOfType<AudioManager>().Pause("PlayTheme0");
+
+                // Play the powerup sound
+                FindObjectOfType<AudioManager>().Play("PowerUp");
+
                 StartCoroutine(ChangeCharacterSpeed(1.5f, 1f));
+
+
+                // Unpause the background music
+                FindObjectOfType<AudioManager>().Unpause("PlayTheme0");
+
                 break;
             case Type.down:
                 Debug.Log("Collected a power down");
+
+                // Pause the background music
+                FindObjectOfType<AudioManager>().Pause("PlayTheme0");
+
+                // Play the powerdown sound
+                FindObjectOfType<AudioManager>().Play("PowerDown");
+
                 StartCoroutine(ChangeCharacterSpeed(0.75f, 1f));
+
+
+                // Unpause the background music
+                FindObjectOfType<AudioManager>().Unpause("PlayTheme0");
+
                 break;
         }
 
@@ -34,6 +55,8 @@ public class Power : MonoBehaviour
     {
         chariotController.speed *= multiplier;
         yield return new WaitForSeconds(time);
+
         chariotController.speed *= 1.0f / multiplier;
+
     }
 }

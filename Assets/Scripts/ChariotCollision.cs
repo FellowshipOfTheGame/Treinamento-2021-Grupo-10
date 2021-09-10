@@ -16,7 +16,7 @@ public class ChariotCollision : MonoBehaviour
         {
 
         }
-
+                
         // Tests whether the chariot collides with 
         // the winning object
         if (collision.collider.tag == "WinCollider")

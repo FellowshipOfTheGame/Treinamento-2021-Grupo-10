@@ -49,6 +49,9 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    // OBS: The functions bellow could be one function with a "switch - case"
+    //      
+
     // Play the sound with the 'name' passed by parameter
     public void Play (string name)
     {
@@ -80,7 +83,45 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        // Play the sound found
+        // Stop the sound found
         s.source.Stop();
     }
+
+    // Stop the sound with the 'name' passed by parameter
+    public void Pause(string name)
+    {
+        // search in the sound array the sound with de given name
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+
+        // Check it the given 'name' exists
+        if (s == null)
+        {
+            Debug.LogWarning("Sound:" + name + " not found to PAUSE!");
+            return;
+        }
+
+        // Test if the audio is playing
+        if (s.source.isPlaying)
+            s.source.Pause();
+    }
+
+    // Stop the sound with the 'name' passed by parameter
+    public void Unpause(string name)
+    {
+        // search in the sound array the sound with de given name
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+
+        // Check it the given 'name' exists
+        if (s == null)
+        {
+            Debug.LogWarning("Sound:" + name + " not found to UNPAUSE!");
+            return;
+        }
+
+        // Test if the audio is not playing
+        if (s.source.isPlaying == false)
+            s.source.UnPause();
+    }
+
+
 }
