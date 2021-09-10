@@ -1,10 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameOver : MonoBehaviour
+public class VictoryMenu : MonoBehaviour
 {
+    public Text timePoints;
+    public Text collectablePoints;
+    public Text totalPoints;
+
+    // Set all text of the Victory Menu with the points from PlayerPoints
+    public void SetPoints()
+    {
+        //GameObject PlayerPoints = FindObjectOfType<PlayerPoints>();
+
+        timePoints.text = "Speed Points: " + ((int)FindObjectOfType<PlayerPoints>().TimePoints()).ToString();
+        collectablePoints.text = "Collectable Points: " + ((int)FindObjectOfType<PlayerPoints>().CollectablePoints()).ToString();
+        totalPoints.text = "Total Points: " + ((int)FindObjectOfType<PlayerPoints>().TotalPoints()).ToString();
+    }
+
     // Load the Play scene
     public void PlayAgain()
     {

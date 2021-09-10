@@ -58,12 +58,29 @@ public class AudioManager : MonoBehaviour
         // Check it the given 'name' exists
         if (s == null)
         {
-            Debug.LogWarning("Sound:" + name + " not found!");
+            Debug.LogWarning("Sound:" + name + " not found to PLAY!");
             return;
         }         
 
         
         // Play the sound found
         s.source.Play();
+    }
+
+    // Stop the sound with the 'name' passed by parameter
+    public void Stop (string name)
+    {
+        // search in the sound array the sound with de given name
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+
+        // Check it the given 'name' exists
+        if (s == null)
+        {
+            Debug.LogWarning("Sound:" + name + " not found to STOP!");
+            return;
+        }
+
+        // Play the sound found
+        s.source.Stop();
     }
 }

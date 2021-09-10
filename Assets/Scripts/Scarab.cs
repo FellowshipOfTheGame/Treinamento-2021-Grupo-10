@@ -15,6 +15,8 @@ public class Scarab : MonoBehaviour
         // Play the Scarab collision sound
         FindObjectOfType<AudioManager>().Play("ScarabCollision");
 
+        FindObjectOfType<ChariotCollision>().AddCollectable(1);
+
         // Search for the active Pyramid HUD
         for (int i = 0; i < Pyramid.Length - 1; i++)
         {
