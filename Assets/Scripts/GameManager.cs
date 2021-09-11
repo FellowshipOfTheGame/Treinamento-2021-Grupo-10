@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
         // Stop the music
         FindObjectOfType<AudioManager>().Stop("PlayTheme0");
 
+        // Play victory sound
+        FindObjectOfType<AudioManager>().Play("Victory");
+
         // Freeze the game
         Time.timeScale = 0f;
 
