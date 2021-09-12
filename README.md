@@ -1,3 +1,3 @@
-# "NAME OF THE GAME"
+# Pyramid Climb
 
 The game is cool.
