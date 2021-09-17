@@ -1900,6 +1900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03e8c6a5e959c12499bdcd4109768b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anime: {fileID: 1843730677}
   chariot: {fileID: 503540550}
   wheel: {fileID: 1370694587}
   initialImpulse: 100

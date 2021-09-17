@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ChariotController : MonoBehaviour
 {
+    public Animator anime;
+
     public Rigidbody2D chariot;
     public Rigidbody2D wheel;
 
@@ -33,6 +35,22 @@ public class ChariotController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Stop or Start the horse walk animation if the player is or is not pressing "Horizontal"
+        if (anime.GetBool("isWalking"))
+        {
+            if (movement == 0)
+            {
+                anime.SetBool("isWalking", false);
+            }
+        }
+        else if (!anime.GetBool("isWalking"))
+        {
+            if (movement != 0)
+            {
+                anime.SetBool("isWalking", true);
+            }
+        }
+
         chariot.AddTorque((-1) * movement * chariotTorque * Time.fixedDeltaTime);
         wheel.AddTorque((-1) * movement * speed * Time.fixedDeltaTime);
 
