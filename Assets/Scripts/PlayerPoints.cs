@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerPoints : MonoBehaviour
 {
     public Text testTest;
-    public float initialPoints = 1000;
+    public float initialPoints = 0000;
     public float timeFactor = 1;
     public float collectableFactor = 200;
 
@@ -43,7 +43,7 @@ public class PlayerPoints : MonoBehaviour
         // Tests if the point is a negative number
         if (points < 0)
         {
-            return 0;
+            return 0000;
         }
         else
         {
@@ -62,6 +62,6 @@ public class PlayerPoints : MonoBehaviour
     // Return the total points of the player
     public float TotalPoints()
     {
-        return CollectablePoints() + TimePoints();
+        return CollectablePoints();
     }
 }
