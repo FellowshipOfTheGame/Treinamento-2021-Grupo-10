@@ -9,6 +9,7 @@ TagManager:
   - WinCollider
   - BodyCollider
   - Ground
+  - Destructible
   layers:
   - Default
   - TransparentFX

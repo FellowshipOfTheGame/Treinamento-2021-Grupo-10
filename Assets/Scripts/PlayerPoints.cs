@@ -7,9 +7,12 @@ using UnityEngine.SceneManagement;
 public class PlayerPoints : MonoBehaviour
 {
     public Text testTest;
-    public float initialPoints = 0000;
-    public float timeFactor = 1;
-    public float collectableFactor = 200;
+    public float initialPoints = 0f;
+    public float timeFactor = 1f;
+    public float collectableFactor = 200f;
+    public float destructibleFactor = 10f;
+
+    private int destructibleDestroyed = 0;
 
     private float GameTime;
 
@@ -17,6 +20,17 @@ public class PlayerPoints : MonoBehaviour
     void Start()
     {
         GameTime = 0;
+    }
+
+    public void AddDestroyed()
+    {
+        Debug.Log("DESTROYED ADDED");
+        destructibleDestroyed ++;
+    }
+
+    public float ShowDestroyedPoints()
+    {
+        return destructibleFactor * destructibleDestroyed;
     }
 
     // Update is called once per frame
@@ -62,6 +76,6 @@ public class PlayerPoints : MonoBehaviour
     // Return the total points of the player
     public float TotalPoints()
     {
-        return CollectablePoints();
+        return CollectablePoints() + ShowDestroyedPoints();
     }
 }
