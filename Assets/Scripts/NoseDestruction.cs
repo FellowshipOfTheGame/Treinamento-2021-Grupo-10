@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class NoseDestruction : MonoBehaviour
 {
-    
-    private void OnTriggerEnter(Collider other)
+    private bool isPassed = false;
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Hit nose");
-        transform.GetComponent<Rigidbody2D>().gravityScale = 1;
+        if (!isPassed)
+        {
+            isPassed = true;
+            FindObjectOfType<PlayerPoints>().AddDestroyed();
+            Debug.Log("Hit nose");
+            transform.GetComponent<Rigidbody2D>().gravityScale = 1;
+        }
     }
-
-    /*
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("Hit nose");
-        transform.GetComponent<Rigidbody2D>().gravityScale = 1;
-    }*/
 }

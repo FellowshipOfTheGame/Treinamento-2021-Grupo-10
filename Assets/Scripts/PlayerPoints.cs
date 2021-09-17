@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerPoints : MonoBehaviour
 {
     public Text testTest;
+    public TextMeshProUGUI textPoints;
     public float initialPoints = 0f;
     public float timeFactor = 1f;
     public float collectableFactor = 200f;
@@ -24,7 +26,6 @@ public class PlayerPoints : MonoBehaviour
 
     public void AddDestroyed()
     {
-        Debug.Log("DESTROYED ADDED");
         destructibleDestroyed ++;
     }
 
@@ -34,10 +35,11 @@ public class PlayerPoints : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         GameTime += Time.deltaTime;
         testTest.text = TotalPoints().ToString();
+        textPoints.text = "Total Points: " + TotalPoints().ToString();
     }
 
     public float ShowTime()
