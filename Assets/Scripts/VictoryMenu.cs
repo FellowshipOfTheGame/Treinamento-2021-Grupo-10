@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class VictoryMenu : MonoBehaviour
 {
+    //public GameObject HUD;
     public Text timePoints;
     public Text collectablePoints;
     public Text totalPoints;

@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    
     public GameObject GameOverMenu;
     public GameObject VictoryMenu;
+    public GameObject HUD;
     bool isGameEnded = false;
 
     // Called when the player wins
     public void WinGame()
     {
+        //HUD.SetActive(false);
         Debug.Log("VICTORY LOG");
 
         // Stop the music
@@ -34,6 +37,7 @@ public class GameManager : MonoBehaviour
     {
         if (!isGameEnded)
         {
+            //HUD.SetActive(false);
             isGameEnded = true;
             Debug.Log("GAME OVER LOG");
 
