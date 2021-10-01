@@ -33,11 +33,7 @@ public class HUD : MonoBehaviour
         scoreHalfHeigth = colliderScore.size.y / 2;
         powerHalfWidth = colliderPower.size.x/2;
         powerHalfHeigth = colliderPower.size.y / 2;
-    }
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
         // save screen edges in world coordinates
         float screenZ = -cam.transform.position.z;
 
@@ -55,34 +51,37 @@ public class HUD : MonoBehaviour
         ClampInScreen();
     }
 
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+    }
+
+    // Reposition the Thunder and the Points in the HUD accordingly to the screen size
     void ClampInScreen()
     {
         Vector3 positionScore = MenuScore.transform.position;
         Vector3 positionPower = PowerUp.transform.position;
 
-        float screenLeftTrue = screenLeft; //- 165f;
-
-        //Debug.Log(positionScore.x + " " + screenRight + " " + scoreHalfWidth*4);
-        //Debug.Log(positionPower.x + " " + screenLeftTrue + " " + scoreHalfWidth);
+        float screenLeftTrue = screenLeft; 
 
         if (positionScore.x + scoreHalfWidth*4 > screenRight )
         {
-            positionScore.x -= scoreHalfWidth;
+            positionScore.x = screenRight - scoreHalfWidth * 4;
             MenuScore.transform.position = positionScore;
         }
         else if (screenRight - positionScore.x  > scoreHalfWidth * 8)
         {
-            positionScore.x += scoreHalfWidth;
+            positionScore.x = screenRight - scoreHalfWidth * 8;
             MenuScore.transform.position = positionScore;
         }
         if (positionPower.x - scoreHalfWidth*4 < screenLeft)
         {
-            positionPower.x += scoreHalfWidth;
+            positionPower.x = screenLeft + scoreHalfWidth * 4;
             PowerUp.transform.position = positionPower;
         }
         else if (positionPower.x - screenLeft > scoreHalfWidth * 8)
         {
-            positionPower.x -= scoreHalfWidth;
+            positionPower.x = screenLeft - scoreHalfWidth * 8;
             PowerUp.transform.position = positionPower;
         }
     }
