@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3049909469865160740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3049909469865160730}
+  - component: {fileID: 3049909469865160741}
+  m_Layer: 0
+  m_Name: AudioManager 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3049909469865160730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3049909469865160740}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3049909469865160741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3049909469865160740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db6c9620501de004c893044e8b5c1c79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: MainMenuTheme
+    clip: {fileID: 8300000, guid: 03279e3bce14d664da8f2fe5ad0e98a9, type: 3}
+    output: {fileID: 24300002, guid: 2fb736915e5d19e429792802d20b238f, type: 2}
+    volume: 0.538
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: PlayTheme0
+    clip: {fileID: 8300000, guid: 25394e82fe1a8b74c9fb91feac20a7c0, type: 3}
+    output: {fileID: 24300002, guid: 2fb736915e5d19e429792802d20b238f, type: 2}
+    volume: 0.559
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: PlayTheme1
+    clip: {fileID: 8300000, guid: c28278ea7c4b86c429da07fb77a10c87, type: 3}
+    output: {fileID: 24300002, guid: 2fb736915e5d19e429792802d20b238f, type: 2}
+    volume: 0.586
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: ButtonClick
+    clip: {fileID: 8300000, guid: 45b64d1411559a547a6edfb33df14b80, type: 3}
+    output: {fileID: 24300002, guid: 2fb736915e5d19e429792802d20b238f, type: 2}
+    volume: 0.305
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ScarabCollision
+    clip: {fileID: 8300000, guid: 3ac355e148ae54449a36778b231301ec, type: 3}
+    output: {fileID: 24300002, guid: 2fb736915e5d19e429792802d20b238f, type: 2}
+    volume: 0.305
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PowerUp
+    clip: {fileID: 8300000, guid: 33171c3c4247e2b42b139f801de4bec5, type: 3}
+    output: {fileID: 24300002, guid: 2fb736915e5d19e429792802d20b238f, type: 2}
+    volume: 0.305
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PowerDown
+    clip: {fileID: 8300000, guid: 897e3608e981a6649bc7ced40baad322, type: 3}
+    output: {fileID: 24300002, guid: 2fb736915e5d19e429792802d20b238f, type: 2}
+    volume: 0.305
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Death
+    clip: {fileID: 8300000, guid: 903c03c4e052058408a21afee28bce8f, type: 3}
+    output: {fileID: 24300002, guid: 2fb736915e5d19e429792802d20b238f, type: 2}
+    volume: 0.305
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Victory
+    clip: {fileID: 8300000, guid: 9525d676839bd0b4b8ca55d70fa1cc20, type: 3}
+    output: {fileID: 24300002, guid: 2fb736915e5d19e429792802d20b238f, type: 2}
+    volume: 0.305
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Jar
+    clip: {fileID: 8300000, guid: 2f79fa787cbefef468e1712cfc223be4, type: 3}
+    output: {fileID: 24300002, guid: 2fb736915e5d19e429792802d20b238f, type: 2}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Box
+    clip: {fileID: 8300000, guid: f063b32b286c26c49a6db2ea868ffee4, type: 3}
+    output: {fileID: 24300002, guid: 2fb736915e5d19e429792802d20b238f, type: 2}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: RedJar
+    clip: {fileID: 8300000, guid: 2f79fa787cbefef468e1712cfc223be4, type: 3}
+    output: {fileID: 24300002, guid: 2fb736915e5d19e429792802d20b238f, type: 2}
+    volume: 0.1
+    pitch: 2.13
+    loop: 0
+    source: {fileID: 0}
