@@ -123,5 +123,23 @@ public class AudioManager : MonoBehaviour
             s.source.UnPause();
     }
 
+    /*
+    // Can play multiple sounds on one AudioSource
+    public void PlayOneShot(string name, float volumeScale)
+    {
+        // search in the sound array the sound with de given name
+        Sound s = Array.Find(sounds, sound => sound.name == name);
 
+        // Check it the given 'name' exists
+        if (s == null)
+        {
+            Debug.LogWarning("Sound:" + name + " not found to PlayOneShot!");
+            return;
+        }
+
+        s.source.PlayOneShot();
+    }
+
+
+    */
 }

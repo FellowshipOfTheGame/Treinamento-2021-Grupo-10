@@ -123,6 +123,62 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &103975684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 103975687}
+  - component: {fileID: 103975686}
+  - component: {fileID: 103975685}
+  m_Layer: 0
+  m_Name: __scene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &103975685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103975684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb5a9e1dc3af8341b9131168c8c0806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &103975686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103975684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df81c9eb445e85b458099aaa436d9b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &103975687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103975684}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2562.2844, y: 92.56783, z: 71.50552}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &913188467
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,7 +260,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &986559290
 GameObject:
@@ -373,6 +429,30 @@ PrefabInstance:
     - target: {fileID: 3049909469865160740, guid: 2965e4c160756304f86a70423fa189f4, type: 3}
       propertyPath: m_Name
       value: __audio
+      objectReference: {fileID: 0}
+    - target: {fileID: 3049909469865160741, guid: 2965e4c160756304f86a70423fa189f4, type: 3}
+      propertyPath: sounds.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3049909469865160741, guid: 2965e4c160756304f86a70423fa189f4, type: 3}
+      propertyPath: sounds.Array.data[12].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2f79fa787cbefef468e1712cfc223be4, type: 3}
+    - target: {fileID: 3049909469865160741, guid: 2965e4c160756304f86a70423fa189f4, type: 3}
+      propertyPath: sounds.Array.data[12].name
+      value: RedJar
+      objectReference: {fileID: 0}
+    - target: {fileID: 3049909469865160741, guid: 2965e4c160756304f86a70423fa189f4, type: 3}
+      propertyPath: sounds.Array.data[12].pitch
+      value: 2.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3049909469865160741, guid: 2965e4c160756304f86a70423fa189f4, type: 3}
+      propertyPath: sounds.Array.data[12].output
+      value: 
+      objectReference: {fileID: 24300002, guid: 2fb736915e5d19e429792802d20b238f, type: 2}
+    - target: {fileID: 3049909469865160741, guid: 2965e4c160756304f86a70423fa189f4, type: 3}
+      propertyPath: sounds.Array.data[12].volume
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2965e4c160756304f86a70423fa189f4, type: 3}

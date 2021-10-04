@@ -5,11 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
+    private AudioManager audioManager;
+    private SceneControl sceneControl;
+
+    void Start()
+    {
+        audioManager = FindObjectOfType<AudioManager>();
+        sceneControl = FindObjectOfType<SceneControl>();
+    }
+
     // Load the Play scene
     public void PlayAgain()
     {
         // Play the click sound
-        FindObjectOfType<AudioManager>().Play("ButtonClick");
+        audioManager.Play("ButtonClick");
 
         Time.timeScale = 1f;
         SceneManager.LoadScene("Play");
@@ -19,7 +28,7 @@ public class GameOver : MonoBehaviour
     public void LoadMenu()
     {
         // Play the click sound
-        FindObjectOfType<AudioManager>().Play("ButtonClick");
+        audioManager.Play("ButtonClick");
 
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
@@ -29,7 +38,7 @@ public class GameOver : MonoBehaviour
     public void QuitGame()
     {
         // Play the click sound
-        FindObjectOfType<AudioManager>().Play("ButtonClick");
+        audioManager.Play("ButtonClick");
 
         Debug.Log("Quit the game");
         Application.Quit();
