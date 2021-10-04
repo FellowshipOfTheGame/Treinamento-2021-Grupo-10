@@ -9,6 +9,12 @@ public class GameManager : MonoBehaviour
     public GameObject VictoryMenu;
     public GameObject HUD;
     bool isGameEnded = false;
+    private AudioManager audioManager;
+
+    private void Start()
+    {
+        audioManager = FindObjectOfType<AudioManager>();
+    }
 
     // Called when the player wins
     public void WinGame()
@@ -17,10 +23,10 @@ public class GameManager : MonoBehaviour
         Debug.Log("VICTORY LOG");
 
         // Stop the music
-        FindObjectOfType<AudioManager>().Stop("PlayTheme0");
+        audioManager.Stop("PlayTheme0");
 
         // Play victory sound
-        FindObjectOfType<AudioManager>().Play("Victory");
+        audioManager.Play("Victory");
 
         // Freeze the game
         Time.timeScale = 0f;
@@ -42,10 +48,10 @@ public class GameManager : MonoBehaviour
             Debug.Log("GAME OVER LOG");
 
             // Play death sound
-            FindObjectOfType<AudioManager>().Play("Death");
+            audioManager.Play("Death");
 
             // Stop the music
-            FindObjectOfType<AudioManager>().Stop("PlayTheme0");
+            audioManager.Stop("PlayTheme0");
 
             // Add a delay for the player see his death
 

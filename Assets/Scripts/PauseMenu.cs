@@ -11,9 +11,12 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject BackgroundImage;
 
+    private AudioManager audioManager;
+
     // Update is called once per frame
     void Update()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         // Check if the user press ESC button
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -26,7 +29,7 @@ public class PauseMenu : MonoBehaviour
             else
             {
                 Pause();
-            }            
+            }
         }
     }
 
@@ -34,7 +37,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         // Play the click sound
-        FindObjectOfType<AudioManager>().Play("ButtonClick");
+        audioManager.Play("ButtonClick");
 
         // Exit the Pause Menu in the canvas
         pauseMenuUI.SetActive(false);
@@ -51,7 +54,7 @@ public class PauseMenu : MonoBehaviour
     void Pause()
     {
         // Play the click sound
-        FindObjectOfType<AudioManager>().Play("ButtonClick");
+        audioManager.Play("ButtonClick");
 
         // Show the Pause Menu in the canvas
         pauseMenuUI.SetActive(true);
@@ -69,7 +72,10 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         // Play the click sound
-        FindObjectOfType<AudioManager>().Play("ButtonClick");
+        audioManager.Play("ButtonClick");
+
+        // Stop the Play Scene Theme Song
+        audioManager.Stop("PlayTheme0");
 
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
@@ -79,7 +85,7 @@ public class PauseMenu : MonoBehaviour
     public void QuitGame()
     {
         // Play the click sound
-        FindObjectOfType<AudioManager>().Play("ButtonClick");
+        audioManager.Play("ButtonClick");
 
         Debug.Log("Quit the game");
         Application.Quit();

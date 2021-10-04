@@ -10,7 +10,7 @@ public class DevPreload : MonoBehaviour
 {
     public static DevPreload Instance { get; private set; }
     public enum Type { Menu, Play };
-    public Type scene;
+    public Type nextScene;
 
     void Awake()
     {
@@ -22,8 +22,6 @@ public class DevPreload : MonoBehaviour
         {
             Instance = this;
         }
-
-        Debug.Log(scene);
 
         GameObject check = GameObject.Find("__app");
 
