@@ -12,6 +12,7 @@ public class OptionsMenu : MonoBehaviour
     public GameObject toggleBar02;
 
     Resolution[] resolutions;
+    private List<int> resolutionsIndex = new List<int>();
 
     // Play when the game starts
     void Start ()
@@ -23,16 +24,24 @@ public class OptionsMenu : MonoBehaviour
 
         List<string> resolutionList = new List<string>();
 
-
         int currentResolutionIndex = 0;
+
+        // Add the first resolution from the resolution list
+        resolutionList.Add(resolutions[0].width + " x " + resolutions[0].height);
+        resolutionsIndex.Add(0);
 
         // Transforms the resolution list in a list of strings 
         // for the resolutionDropdown formatation
-        for (int i = 0; i < resolutions.Length; i++)
+        for (int i = 1; i < resolutions.Length; i++)
         {
-            string option = resolutions[i].width + " x " + resolutions[i].height;
+            // Test if the resolution of index 'i' is not equal the resolution of index 'i-1' ( Prevents duplicate resolutions on the toggle )
+            if (!(resolutions[i].width == resolutions[i - 1].width && resolutions[i].height == resolutions[i - 1].height))
+            {
+                string option = resolutions[i].width + " x " + resolutions[i].height;
 
-            resolutionList.Add(option);
+                resolutionList.Add(option);
+                resolutionsIndex.Add(i);
+            }
 
             // Search for the index of the current screen resolution and
             // keeps his value in the variable 'currentResolutionIndex'
@@ -51,10 +60,15 @@ public class OptionsMenu : MonoBehaviour
         resolutionDropdown.RefreshShownValue();
     }
 
-    // Set the resolution of the game
-    public void SetResolution (int resolutionIndex)
+    private void UpdateResolutionList()
     {
-        Resolution resolution = Screen.resolutions[resolutionIndex];
+
+    }
+
+    // Set the resolution of the game
+    public void SetResolution (int toggleIndex)
+    {
+        Resolution resolution = Screen.resolutions[resolutionsIndex[toggleIndex]];
 
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
