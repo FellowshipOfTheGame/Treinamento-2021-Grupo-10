@@ -13,10 +13,14 @@ public class PauseMenu : MonoBehaviour
 
     private AudioManager audioManager;
 
+    private void Start()
+    {
+        audioManager = FindObjectOfType<AudioManager>();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        audioManager = FindObjectOfType<AudioManager>();
         // Check if the user press ESC button
         if (Input.GetKeyDown(KeyCode.Escape))
         {
